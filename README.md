@@ -1,33 +1,42 @@
 # Customer Shopping Behavior Analysis Project
 
 ## Executive Summary
-This project follows a professional corporate workflow to analyze retail customer behavior. By processing raw data in **Python**, performing deep-dive analysis in **PostgreSQL**, and visualizing insights in **Power BI**, the project identifies high-value customer segments and optimized delivery strategies. The final output includes a client-ready presentation and a fully interactive dashboard.
+This project demonstrates a complete data analytics lifecycle, transitioning from raw data to actionable business intelligence. By integrating **Python** for data engineering, **SQL** for deep-dive analysis, and **Power BI** for visualization, the project identifies key drivers of retail revenue. Key findings include the high value of the "Young Adult" demographic and the discovery that repeat buyers are not yet fully converted to the subscription model, providing a clear path for targeted marketing interventions.
 
 ## Objective
-The goal is to answer critical business questions regarding:
-* Customer demographics and their impact on revenue.
-* The effectiveness of current subscription and discount programs.
-* Product performance and ranking across different retail categories.
+The primary goal is to leverage customer shopping data to identify trends, improve customer engagement, and optimize marketing strategies. Specifically, the project aims to:
+* Segment customers based on loyalty and purchasing patterns.
+* Analyze the impact of discounts and shipping types on total spend.
+* Provide a centralized dashboard for stakeholders to track KPIs in real-time.
 
 ## Data Source
-* **Dataset:** Customer Shopping Behavior CSV.
-* **Attributes:** 3,900 rows containing Customer ID, Age, Gender, Item Purchased, Category, Purchase Amount, Location, Size, Color, Season, Review Rating, Subscription Status, Shipping Type, Discount Applied, Previous Purchases, and Frequency.
+* **Dataset:** Customer Shopping Behavior Dataset.
+* **Content:** Contains 3,900 records of customer transactions including demographics (age, gender), purchase details (amount, category, item), and behavioral data (frequency, review ratings, subscription status).
 
 ## Tech Stack
-* **Python:** Data cleaning and Feature Engineering (Pandas, SQL Alchemy).
-* **SQL:** Advanced querying in PostgreSQL (Window Functions, CTEs).
-* **Power BI:** Data visualization and DAX measures.
-* **Gamma AI:** Automated presentation generation.
+* **Data Manipulation:** Python (Pandas, NumPy)
+* **Database:** PostgreSQL (Data storage and complex querying)
+* **Visualization:** Power BI (Interactive Dashboards)
+* **Reporting:** Microsoft Word & Gamma AI (Presentation Deck)
+* **Environment:** Jupyter Notebook / PGAdmin 4
 
-## Analysis Workflow
-* **Python:** Imputed missing ratings using category medians, handled feature engineering (age groups), and converted text frequencies to numeric day counts.
-* **SQL:** Segmented customers into New, Returning, and Loyal groups based on purchase history. Analyzed revenue by gender and shipping preference.
-* **Power BI:** Built a sleek, interactive dashboard with dynamic slicers to track KPIs like average spend and subscriber distribution.
+## Project Workflow
+1. **Data Cleaning & Feature Engineering (Python):**
+    * Handled missing values in `review_rating` using category-specific medians.
+    * Standardized column names to `snake_case` for SQL compatibility.
+    * Created `age_group` and converted textual frequency into numeric `purchase_frequency_days`.
+2. **SQL Analysis:**
+    * Performed customer segmentation into "New," "Returning," and "Loyal" categories.
+    * Ranked top products per category using Window Functions (`ROW_NUMBER`).
+    * Analyzed revenue distribution across demographics.
+3. **Power BI Dashboard:**
+    * Developed measures for Total Revenue, Average Spend, and Rating.
+    * Built an interactive interface with slicers for Subscription Status, Gender, and Category.
 
-## Business Recommendations
-* **Loyalty Conversion:** Targeted campaigns should focus on the 2,500+ repeat buyers who are not yet subscribers.
-* **Shipping Tiers:** Express shipping drives higher spending; recommend incentivizing faster shipping for premium categories.
-* **Marketing Focus:** Focus budget on the "Young Adult" segment, as they represent the highest total revenue.
+## Key Business Insights
+* **Demographic Power:** Young Adults are the leading revenue contributors.
+* **Shipping Impact:** Customers opting for Express shipping have a higher average purchase amount than Standard users.
+* **Subscription Gap:** A significant portion of "Loyal" customers (repeat buyers) are not yet subscribers, indicating a major upsell opportunity.
 
 ## Preview
 | Final Dashboard Preview |
