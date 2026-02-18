@@ -21,6 +21,10 @@ The primary goal is to leverage customer shopping data to identify trends, impro
 * **Environment:** Jupyter Notebook / PGAdmin 4
 
 ## Project Workflow
+| Workflow |
+| :--- |
+| ![Workflow Diagram](screenshots/Workflow-diagram.png) |
+
 1. **Data Cleaning & Feature Engineering (Python):**
     * Handled missing values in `review_rating` using category-specific medians.
     * Standardized column names to `snake_case` for SQL compatibility.
